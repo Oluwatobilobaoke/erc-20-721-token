@@ -29,7 +29,7 @@ contract YDMTokenOld is IERC20 {
     mapping(address => mapping (address => uint256)) allowed;
 
     uint256 totalSupply_;
-    uint256 private constant claimTokenRate = 0.001 ether;
+    uint256 private constant claimTokenRate = 1000;
 
     constructor() {
         totalSupply_ = 1000000;
@@ -76,7 +76,7 @@ contract YDMTokenOld is IERC20 {
         
     function buyToken(address reciever) public payable returns (bool){
         require(msg.value >= 0, "You cannot mint YDMTO with zero ETH");
-        uint numTokens = msg.value / claimTokenRate;
+        uint numTokens = msg.value * claimTokenRate;
         balances[reciever] = balances[reciever].add(numTokens);
         totalSupply_ = totalSupply_.add(numTokens);
 
