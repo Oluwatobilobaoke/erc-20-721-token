@@ -18,12 +18,13 @@ interface IERC20 {
 }
 
 
-contract YDMTokenOld is IERC20 {
+contract YDMToken is IERC20 {
     using SafeMath for uint256;
 
-    string public constant name = "YDMTokenOld";
+    string public constant name = "YDMToken";
     string public constant symbol = "YDMTO";
     uint8 public constant decimals = 18;
+    address payable public deployer;
 
     mapping(address => uint256) balances;
     mapping(address => mapping (address => uint256)) allowed;
@@ -31,8 +32,9 @@ contract YDMTokenOld is IERC20 {
     uint256 totalSupply_;
     uint256 private constant claimTokenRate = 1000;
 
-    constructor() {
-        totalSupply_ = 1000000;
+    constructor() payable {
+        deployer = payable(msg.sender);
+        totalSupply_ = 1000000 * 10**decimals;
         balances[msg.sender] = totalSupply_;
     }
 
@@ -76,10 +78,12 @@ contract YDMTokenOld is IERC20 {
         
     function buyToken(address reciever) public payable returns (bool){
         require(msg.value >= 0, "You cannot mint YDMTO with zero ETH");
-        uint numTokens = msg.value * claimTokenRate;
+        (bool success, ) = deployer.call{value: msg.value}("");
+        require(success, "Failed to send money");
+        uint numTokens = (msg.value * claimTokenRate);
         balances[reciever] = balances[reciever].add(numTokens);
+        totalSupply_ = totalSupply_.sub(numTokens);
         totalSupply_ = totalSupply_.add(numTokens);
-
         emit ClaimedToken(reciever, msg.value);
         return true;
     }
