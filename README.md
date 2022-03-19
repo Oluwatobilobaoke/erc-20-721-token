@@ -9,21 +9,29 @@
 ---
 ## ERC721
 ---
-###Collection Name: YDMNFT
-###CA: 0xe588ccafb2a35737252ee63851f3184a589b270a
-###link: [0xe588ccafb2a35737252ee63851f3184a589b270a](https://rinkeby.etherscan.io/address/0xe588ccafb2a35737252ee63851f3184a589b270a)
+- Collection Name: YDMNFT
+
+- CA: 0xe588ccafb2a35737252ee63851f3184a589b270a
+
+- link: [0xe588ccafb2a35737252ee63851f3184a589b270a](https://rinkeby.etherscan.io/address/0xe588ccafb2a35737252ee63851f3184a589b270a)
 
 
 NFT metadata:
 ## 1. MTS NFT
--name: [mts](https://testnets.opensea.io/assets/0xe588ccafb2a35737252ee63851f3184a589b270a/6/)
--image: https://gateway.pinata.cloud/ipfs/QmccCYMG4UNnPwLo8zfvszsYUWyrwAje4U5X2cMdDqCUjW
--description: A piece of YDM NFT!
+---
+- name: [mts](https://testnets.opensea.io/assets/0xe588ccafb2a35737252ee63851f3184a589b270a/6/)
+
+- image: https://gateway.pinata.cloud/ipfs/QmccCYMG4UNnPwLo8zfvszsYUWyrwAje4U5X2cMdDqCUjW
+
+- description: A piece of YDM NFT!
 
 ##2. API NFT
--name: [api](https://testnets.opensea.io/assets/0xe588ccafb2a35737252ee63851f3184a589b270a/1/)
--image: https://gateway.pinata.cloud/ipfs/QmSRgTGfSjsDiTbcWKjwjgFoBQkdNvnb2XVe3Y3XNwoYpm
--description: A piece of YDM NFT!
+---
+- name: [api](https://testnets.opensea.io/assets/0xe588ccafb2a35737252ee63851f3184a589b270a/1/)
+
+- image: https://gateway.pinata.cloud/ipfs/QmSRgTGfSjsDiTbcWKjwjgFoBQkdNvnb2XVe3Y3XNwoYpm
+
+- description: A piece of YDM NFT!
 
 function name: createYNFT
 
