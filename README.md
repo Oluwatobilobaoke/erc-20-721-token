@@ -21,7 +21,7 @@ NFT metadata:
 ---
 - name: [mts](https://testnets.opensea.io/assets/0xe588ccafb2a35737252ee63851f3184a589b270a/6/)
 
-- image: https://gateway.pinata.cloud/ipfs/QmccCYMG4UNnPwLo8zfvszsYUWyrwAje4U5X2cMdDqCUjW
+- image: https://ipfs.io/ipfs/QmccCYMG4UNnPwLo8zfvszsYUWyrwAje4U5X2cMdDqCUjW
 
 - description: A piece of YDM NFT!
 
@@ -29,7 +29,7 @@ NFT metadata:
 ---
 - name: [api](https://testnets.opensea.io/assets/0xe588ccafb2a35737252ee63851f3184a589b270a/1/)
 
-- image: https://gateway.pinata.cloud/ipfs/QmSRgTGfSjsDiTbcWKjwjgFoBQkdNvnb2XVe3Y3XNwoYpm
+- image: https://ipfs.io/ipfs/QmSRgTGfSjsDiTbcWKjwjgFoBQkdNvnb2XVe3Y3XNwoYpm
 
 - description: A piece of YDM NFT!
 
